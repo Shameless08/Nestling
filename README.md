@@ -9,10 +9,20 @@
 ```
 .
 ├── frontend/         # 微信小程序前端代码
+│   ├── app.js        # 全局逻辑与登录封装
+│   ├── app.json      # 页面配置与主题设置
+│   ├── config.js     # 接口地址配置
+│   └── pages/        # 页面目录
+│       ├── index/    # 首页（专注度监测）
+│       ├── history/  # 历史记录页
+│       └── report/   # 报告页（展示某天详细数据）
+│
 ├── backend/          # Flask 后端服务 + 图像识别脚本
-│   ├── app.py        # Flask 主程序
+│   ├── app.py        # Flask 主程序（API 接口、数据库模型）
 │   ├── test.py       # 图像识别核心脚本（树莓派运行）
-│   └── best_phone.onnx  # ONNX
+|   ├── best_phone.onnx  # ONNX
+│   └── requirements.txt  # Python 依赖库
+│
 └── README.md         # 本文件
 ```
 
@@ -20,7 +30,7 @@
 
 ## 🧩 功能模块说明
 
-### 1. 微信小程序（frontend）
+### 1. 微信小程序（Frontend）
 
 - 页面组成：
   - 首页：显示当前低头时间、次数、评分等实时数据
@@ -31,7 +41,7 @@
 
 ------
 
-### 2. Flask 后端服务（backend/app.py）
+### 2. Flask 后端服务（Backend/app.py）
 
 - 提供 RESTful API 接口：
   - `/auth`：用户登录，返回 Token
@@ -42,7 +52,7 @@
 
 ------
 
-### 3. 图像识别脚本（backend/opencv-test.py）
+### 3. 图像识别脚本（Backend/opencv-test.py）
 
 - 使用 Mediapipe 和 OpenCV 检测用户的头部姿态与手机使用行为
 - 判断标准：
