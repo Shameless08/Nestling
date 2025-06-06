@@ -6,15 +6,10 @@
 
 ## 📁 项目结构
 ├── frontend/         # 微信小程序前端代码
-
 ├── backend/          # Flask 后端服务 + 图像识别脚本
-
 │   ├── app.py        # Flask 主程序
-
 │   ├── test.py       # 图像识别核心脚本（树莓派运行）
-
 │   └── best_phone.onnx  # ONNX 模型文件（未包含在提交中）
-
 └── README.md         # 本文件
 
 ------
