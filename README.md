@@ -20,7 +20,7 @@
 ├── backend/          # Flask 后端服务 + 图像识别脚本
 │   ├── app.py        # Flask 主程序（API 接口、数据库模型）
 │   ├── test.py       # 图像识别核心脚本（树莓派运行）
-|   ├── best_phone.onnx  # ONNX
+|   ├── best_phone.onnx  # Yolov5 手机模型
 │   └── requirements.txt  # Python 依赖库
 │
 └── README.md         # 本文件
